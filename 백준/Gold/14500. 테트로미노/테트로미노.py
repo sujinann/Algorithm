@@ -6,11 +6,23 @@ for i in range(n):
 dx = [0, 0, 1, -1]
 dy = [1, -1, 0, 0]
 
-answer = []
+answer = 0
+maxi = 0
+
+for i in range(n):
+    for j in range(m):
+        if graph[i][j] > maxi:
+            maxi = graph[i][j]
 
 def dfs(node, graph, visited, s, t):
+    global answer
+
+    if s + (4 - len(visited)) * maxi <= answer:
+        return
+
     if len(visited) == 4:
-        answer.append(s)
+        if s > answer:
+            answer = s
         return
     
     x = node[0]
@@ -37,4 +49,4 @@ for i in range(n):
     for j in range(m):
         dfs([i, j], graph, [[i,j]], graph[i][j], 0)
 
-print(max(answer))
+print(answer)
