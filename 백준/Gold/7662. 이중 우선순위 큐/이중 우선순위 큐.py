@@ -7,7 +7,7 @@ for tc in range(t):
 
     mini = []
     maxi = []
-    visited = [False] * 1000000
+    visited = [False] * k
 
     for i in range(k):
         command, n = input().split()
