@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 n = int(input())
 
 inp = [[] for i in range(n**2+1)]
