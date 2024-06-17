@@ -13,7 +13,7 @@ def change(x, y):
                 maps[x+i][y+j] = 0
 
 for i in range(n):
-        maps.append(list(map(int, input())))
+    maps.append(list(map(int, input())))
 for i in range(n):
     target.append(list(map(int, input())))
 
@@ -25,8 +25,8 @@ if n < 3 or m < 3:
                 break
         if answer == -1:
             break
-else:
 
+else:
     for i in range(n):
         for j in range(m):
             if i <= n-3 and j <= m-3:
