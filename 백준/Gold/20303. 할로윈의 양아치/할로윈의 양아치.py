@@ -24,15 +24,13 @@ def dfs(x):
     value += c[x-1]
 
     for i in graph[x]:
-        if not visited[i]:
-            dfs(i)
+        dfs(i)
 
 temp = []
 for i in range(1, n+1):
     cnt = 0
     value = 0
-    if not visited[i]:
-        dfs(i)
+    dfs(i)
     if cnt > 0:
         temp.append([cnt, value])
 
